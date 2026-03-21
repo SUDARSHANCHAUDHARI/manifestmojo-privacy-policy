@@ -1,115 +1,155 @@
-# Privacy Policy — ManifestMojo
+# ManifestMojo — Privacy Policy
 
-**Last updated: 2026-03-21**
+**Effective Date:** 2026-03-21
+**Last Updated:** 2026-03-21
+**Version:** 1.0.0
 
-**Company:** SudarshanTechLabs
-**Location:** Bangkok, Bangkok, TH
-**Contact:** sudarshantechlabs@gmail.com
-**App:** ManifestMojo
-**Package:** com.sudarshantechlabs.manifestmojo
+Published by **Sudarshan Tech Labs** | https://sudarshantechlabs.com | sudarshantechlabs@gmail.com
 
 ---
 
-## 1. Data Collection
-
-ManifestMojo is designed with your privacy as the default.
-
-**Data stored locally on your device (never sent to our servers):**
-- Your journal entries and affirmations
-- Goals, streaks, and progress data
-- Vision board images you choose to add
-- App settings and preferences
-
-**Data you optionally provide to third-party AI services:**
-- Text you submit to the AI coaching feature is sent to Google Gemini API for processing. Please refer to [Google's Privacy Policy](https://policies.google.com/privacy) for how Google handles this data. You control when and whether you use this feature.
-
-**Data we do NOT collect:**
-- We do not operate servers that receive your personal data.
-- We do not collect analytics, crash reports, or usage telemetry beyond what is provided by the Android platform itself.
-- We do not collect your name, email address, or any account information (no account is required).
+ManifestMojo is a manifestation and goal-setting app for Android. It allows you to write affirmations, capture vision board images, record audio affirmations, and optionally generate AI-powered insights via Google Gemini. All personal data is stored locally on your device in an encrypted database.
 
 ---
 
-## 2. How We Use Your Data
+## Data Collection
 
-All data stored on your device is used solely to provide the app's features:
-- Journal entries are displayed back to you in the app.
-- Streak and goal data powers your progress tracking and widgets.
-- Vision board images are displayed in your personal board view.
-- Settings persist your preferences across sessions.
+### Data Stored Locally on Your Device
 
-We do not use your data for advertising, profiling, or any commercial purpose.
+| Data | Purpose | Storage |
+|---|---|---|
+| Goals and affirmations (text, date, category) | Core app functionality | Room database (SQLCipher encrypted) |
+| Vision board images (from camera or gallery) | Visual manifestation | App private storage |
+| Audio affirmation recordings | Audio manifestation | App private storage |
+| App preferences and reminders | Personalisation | DataStore on your device |
+| PDF exports | Data export | App private storage |
 
----
+All data is encrypted using SQLCipher and stored exclusively on your device.
 
-## 3. Third-Party Services
+### Data Sent to Third-Party Services
 
-ManifestMojo may integrate with the following third-party service:
-
-| Service | Purpose | Privacy Policy |
-|---------|---------|----------------|
-| Google Gemini API | AI coaching and affirmation generation | [policies.google.com/privacy](https://policies.google.com/privacy) |
-
-Text you send to the AI feature is transmitted to Google's Gemini API over a secure (HTTPS) connection. No other third-party services receive your personal data.
+**Google Gemini API (user-initiated only):**
+When you request AI insights, the text content of your affirmations or goals is sent to the Gemini API. Sudarshan Tech Labs does not receive or store this data.
 
 ---
 
-## 4. Data Security
+## How We Use Your Data
 
-- All journal entries and sensitive app data are encrypted on your device using SQLCipher (AES-256 encryption).
-- Data is only accessible through the ManifestMojo app on your device.
-- No data is transmitted to SudarshanTechLabs servers at any time.
-
----
-
-## 5. Data Retention & Deletion
-
-Your data lives entirely on your device. To delete all data:
-1. Uninstall ManifestMojo from your device — this removes all locally stored data permanently.
-2. Alternatively, use the "Clear Data" option in Android Settings → Apps → ManifestMojo.
-
-We have no copies of your data and cannot restore it after deletion.
+| Purpose | Data Used |
+|---|---|
+| Display and manage your goals and affirmations | Local encrypted data |
+| Play back audio affirmations | Local audio files |
+| Generate AI insights (on request) | Affirmation text sent to Gemini API |
+| Send daily affirmation reminders | Local WorkManager schedules |
+| Export content to PDF | Local data (iText7, on-device) |
 
 ---
 
-## 6. Children's Privacy
+## Data Storage and Security
 
-ManifestMojo is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has used the app in a way that concerns you, please contact us and we will assist.
+- **Database:** AES-256 encrypted via SQLCipher
+- **Photos and audio:** Stored in the App's private directory
+- **No cloud storage:** Sudarshan Tech Labs operates no backend server
+- **Android sandbox:** Additional protection from Android's application isolation
 
----
+## Data Retention
 
-## 7. Permissions
-
-ManifestMojo requests the following Android permissions:
-
-| Permission | Reason |
-|-----------|--------|
-| `INTERNET` | Required to communicate with Google Gemini AI API |
-| `POST_NOTIFICATIONS` | Send daily affirmation and reminder notifications |
-| `RECEIVE_BOOT_COMPLETED` | Reschedule notifications after device restart |
-| `SCHEDULE_EXACT_ALARM` | Deliver reminders at your specified exact time |
-| `CAMERA` | Capture photos for your vision board (optional) |
-| `READ_MEDIA_IMAGES` | Select images from your gallery for vision board |
-| `VIBRATE` | Vibrate on notification (optional haptic feedback) |
-
-All permissions are used solely for the features described. Camera and media access are only used when you actively choose to add images.
+| Data | Retention |
+|---|---|
+| All local app data | Until you delete it or uninstall the App |
 
 ---
 
-## 8. Changes to This Privacy Policy
+## Data Sharing
 
-We may update this Privacy Policy from time to time. The updated version will be indicated by a revised "Last updated" date at the top of this document. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.
-
----
-
-## 9. Contact Us
-
-If you have questions or concerns about this Privacy Policy or how your data is handled, please contact:
-
-**SudarshanTechLabs**
-Bangkok, Bangkok, Thailand
-Email: sudarshantechlabs@gmail.com
+We do not sell or share your data. The only external transmission is affirmation text sent to the Gemini API when you explicitly request AI insights.
 
 ---
 
-*This privacy policy was prepared for ManifestMojo by SudarshanTechLabs.*
+## Permissions Explained
+
+| Permission | Why It Is Needed |
+|---|---|
+| `RECORD_AUDIO` | Record audio affirmations |
+| `CAMERA` | Capture vision board images |
+| `READ_MEDIA_IMAGES` (Android 13+) | Select images from gallery on Android 13+ |
+| `READ_EXTERNAL_STORAGE` (Android 12 and below) | Select images from gallery on older Android |
+| `WRITE_EXTERNAL_STORAGE` (Android 9 and below) | Save files on Android 9 and below |
+| `INTERNET` | Call the Gemini API when you request AI insights |
+| `POST_NOTIFICATIONS` | Send daily affirmation reminder notifications |
+| `RECEIVE_BOOT_COMPLETED` | Reschedule reminders after device restart |
+| `SCHEDULE_EXACT_ALARM` | Schedule precise daily reminder alarms |
+| `VIBRATE` | Haptic feedback for reminders |
+
+---
+
+## Your Rights and Controls
+
+- **Delete individual entries:** Use the delete function within the App
+- **Delete all data:** Uninstall or go to Android Settings > Apps > ManifestMojo > Storage > Clear Data
+- **Disable reminders:** Turn off in App Settings
+
+---
+
+## Children's Privacy
+
+ManifestMojo is not directed at children under 13. We do not knowingly collect personal information from children.
+
+---
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of significant changes via:
+
+- In-app notification
+- Updated policy date on this page
+
+Continued use of ManifestMojo after changes become effective constitutes your acceptance of the updated policy.
+
+---
+
+## Contact Us
+
+For privacy questions, data access requests, or account deletion:
+
+- **Email:** sudarshantechlabs@gmail.com
+- **Developer:** sunny.sudarshan@gmail.com
+- **Website:** https://sudarshantechlabs.com
+- **Response Time:** Within 48 hours
+
+---
+
+## GDPR Rights (EU Users)
+
+If you are in the European Economic Area, you have the right to:
+
+- **Access** — Request a copy of your personal data
+- **Rectification** — Correct inaccurate data
+- **Erasure** — Request deletion of your data
+- **Restrict Processing** — Limit how we use your data
+- **Data Portability** — Receive your data in a portable format
+- **Object** — Object to certain types of processing
+
+To exercise these rights, contact us at the details above.
+
+---
+
+## Play Store Data Safety Summary
+
+| Data type | Collected | Shared | Purpose |
+|---|---|---|---|
+| Goals and affirmations | Local only (encrypted) | No | App functionality |
+| Audio recordings | Local only | No | App functionality |
+| Vision board images | Local only | No | App functionality |
+| Affirmation text (Gemini) | On request | Google (Gemini) | AI insights |
+
+---
+
+---
+
+**This privacy policy complies with:**
+- Google Play Store requirements
+- GDPR (General Data Protection Regulation)
+- CCPA (California Consumer Privacy Act)
+
+**Last reviewed:** 2026-03-21
