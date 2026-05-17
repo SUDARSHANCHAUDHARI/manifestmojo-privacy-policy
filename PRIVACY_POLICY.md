@@ -1,292 +1,210 @@
 # ManifestMojo Privacy Policy
 
-**Last updated: January 2025**
+**Effective Date:** May 17, 2026
+_Last updated: May 17, 2026_
+**Version:** 1.1.0
 
-This Privacy Policy applies to the mobile application **ManifestMojo**, published by **Sudarshan Tech Labs**.
-
-**Official website:** https://sudarshantechlabs.com  
-**Company email:** sudarshantechlabs@gmail.com  
-**Developer contact:** sunny.sudarshan@gmail.com
-
-ManifestMojo ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
-
----
+ManifestMojo ("we," "our," or "us") is an Android app. ManifestMojo is a manifestation and journaling app for Android with local goals, intentions, daily posts, media, reminders, and optional AI assistance. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using ManifestMojo you agree to the practices described below.
 
 ## Information We Collect
 
-### Personal Content (Stored Locally)
+### Location Data
+- ManifestMojo does not collect location data.
 
-* **Journal Entries**: Your daily journal entries, including:
-  * Entry content (text you write)
-  * Mood information (happy, neutral, sad, anxious, angry)
-  * Date and timestamp
-* **Affirmations**: Custom affirmations you create, including:
-  * Affirmation text
-  * Category (Wealth, Health, Love, Success, Gratitude, General)
-  * Creation date
-* **Daily Posts**: AI-generated daily manifestation posts that you save or favorite
-* **Activity Logs**: Your app usage data for streak tracking, including:
-  * Daily activity status
-  * Streak information
-  * Last activity date
-
-### App Preferences (Stored Locally)
-
-* **Theme Settings**: Your theme preference (Light, Dark, System Default)
-* **Notification Settings**: 
-  * Notification enable/disable status
-  * Morning reminder time
-  * Evening reminder time
-  * Affirmation frequency preferences
-* **API Key**: Your Google Gemini API key (if you choose to provide your own)
-* **Onboarding Status**: Whether you've completed the onboarding flow
+### Account Information
+- No account is required to use ManifestMojo.
 
 ### Device Information
-
-* **Device Information**: Basic device information for app functionality:
-  * Device model and Android version (for compatibility)
-  * App version (for updates and bug fixes)
-* **Network Status**: Online/offline status (to determine if API calls can be made)
-
-### Analytics and Crash Data
-
-* **App Usage Analytics**: We use analytics to understand how you use the app (if enabled):
-  * Screen views
-  * Feature usage (e.g., journal entries created, affirmations added)
-  * Button clicks
-  * No personally identifiable information is collected in analytics
-* **Crash Reports**: We use crash reporting to identify and fix app crashes (if enabled):
-  * Crash reports include device information, app version, and error details
-  * No personal information or journal content is included in crash reports
-
----
+- Journal entries, intentions, goals, daily posts, media you add, activity logs, preferences, reminder settings, and any Gemini API key you provide are stored locally.
 
 ## How We Use Your Information
 
-### Core App Functionality
+### Location Sharing
+- ManifestMojo does not use your location.
 
-* **Journal Entries**: Store and display your journal entries for personal reflection
-* **Affirmations**: Store and display your custom affirmations
-* **Daily Posts**: Generate and display personalized daily manifestation content
-* **Streak Tracking**: Calculate and display your activity streaks
-* **Notifications**: Send you daily reminders based on your preferences
+### Account Management
+- Manage manifestation goals, journal entries, reminders, and daily content locally.
+- Use optional AI features only when you request them.
 
 ### Service Improvement
+- Improve local manifestation and journaling workflows.
+- We do not sell, rent, or monetize your journal content.
 
-* Improve app functionality and user experience
-* Fix bugs and technical issues (via crash reports)
-* Ensure app security and stability
-* Analyze app usage patterns (via analytics, if enabled)
-* Optimize app performance
+## Storage and Retention
 
-### AI Content Generation
-
-* **Google Gemini API**: We use Google's Gemini AI to generate personalized daily posts
-  * Your selected category is sent to the API to generate relevant content
-  * No personal journal entries or affirmations are sent to the API
-  * Only the category selection is used for content generation
-
----
-
-## Data Storage
-
-### Local Storage
-
-**All your personal data is stored locally on your device:**
-
-* **Journal Entries**: Stored in Room database on your device
-* **Affirmations**: Stored in Room database on your device
-* **Daily Posts**: Stored in Room database on your device (cached for offline access)
-* **Activity Logs**: Stored in Room database on your device
-* **App Preferences**: Stored in DataStore on your device
-* **No Cloud Storage**: We do not store your data in the cloud or on any remote servers
+### Data Storage
+- Personal content and preferences are stored locally using on-device storage.
+- If you use optional AI features, the selected prompt/content may be sent to Google Gemini.
 
 ### Data Retention
+- Local content remains until you delete it, clear app data, or uninstall the app.
 
-* **Journal Entries**: Retained until you delete them manually
-* **Affirmations**: Retained until you delete them manually
-* **Daily Posts**: Cached locally for offline access, retained until you clear app data
-* **Activity Logs**: Retained for streak calculation, deleted when you clear app data
-* **App Preferences**: Retained until you uninstall the app or clear app data
-* **Account Deletion**: You can delete all your data at any time through the app settings
-
----
+### Data Security
+- Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.
+- Local data remains on your device or browser unless a feature you use requires a named third-party service.
+- Network communication uses HTTPS/TLS where applicable.
+- You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.
 
 ## Data Sharing
 
-### No Data Sharing
+### Family Groups
+- ManifestMojo does not use MyFamilyTracker-style family groups unless explicitly described in this policy.
+- If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.
+- You control feature use through the app settings, permissions, account controls, or platform settings.
 
-* **We do not share your data with anyone**
-* **We do not sell your data**
-* **We do not send your journal entries or affirmations to any server**
-* All your personal content remains on your device
+### Third Parties
+- Google Gemini may receive selected text only when you use AI features.
+- No personal journal content is sent to Sudarshan Tech Labs servers.
 
-### Third-Party Services
+We do **not** share your data with:
+- Data brokers
+- Unrelated advertising networks, unless advertising is explicitly listed above for this app
+- Third parties unrelated to the app features described in this policy
 
-* **Google Gemini API**: 
-  * Used only for generating daily posts
-  * Only your selected category is sent to the API (e.g., "wealth", "health")
-  * No personal information, journal entries, or affirmations are sent
-  * See [Google Privacy Policy](https://policies.google.com/privacy) for their data practices
-* **Google Play Services** (if analytics/crash reporting enabled):
-  * Used for app analytics and crash reporting
-  * Only aggregated, anonymized data is collected
-  * See [Google Privacy Policy](https://policies.google.com/privacy) for their data practices
+## Permissions Used
 
----
+### Required Permissions
+
+* **INTERNET**: Used for optional AI/network features.
+* **POST_NOTIFICATIONS, RECEIVE_BOOT_COMPLETED, SCHEDULE_EXACT_ALARM, VIBRATE**: Used for reminders.
+* **CAMERA, READ_MEDIA_IMAGES, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE on older Android versions**: Used for media capture/import/export features.
+
+### Optional Permissions
+
+* AI, camera, media, and reminders are optional features controlled by you.
 
 ## Your Rights and Controls
 
-### Data Control
+### Location Sharing Control
+- No location sharing exists in ManifestMojo.
 
-* **View Your Data**: You can view all your journal entries, affirmations, and daily posts in the app
-* **Edit Your Data**: You can edit or delete journal entries and affirmations at any time
-* **Export Your Data**: You can export your journal entries to text files (Settings → Export)
-* **Delete Your Data**: You can delete individual entries or clear all data (Settings → Clear All Data)
-* **Uninstall**: Uninstalling the app will delete all local data
+### Account Management
+- No account is required.
 
-### Privacy Controls
+### Data Access
+- You can view, edit, export, or delete local journal and manifestation data in the app.
 
-* **Offline Mode**: The app works offline - you can use it without an internet connection
-* **API Key Control**: You can provide your own Gemini API key or use the default (if available)
-* **Notification Control**: You can enable/disable notifications at any time
-* **Analytics Control**: Analytics can be disabled (if implemented in future versions)
+### GDPR Rights (EU Users)
+If you are in the European Union, you have additional rights:
+- **Right to Access**: Request a copy of your personal data
+- **Right to Rectification**: Correct inaccurate data
+- **Right to Erasure**: Request deletion of your data
+- **Right to Restrict Processing**: Limit how we use your data
+- **Right to Data Portability**: Receive your data in a portable format
+- **Right to Object**: Object to certain types of processing
 
----
+To exercise these rights, contact us using the methods in the Contact Us section.
+
+### Permissions
+- You can revoke Android permissions in Android Settings -> Apps -> ManifestMojo -> Permissions.
+- Browser permissions and storage can be managed in your browser site settings for web apps.
+- Revoking required permissions may prevent related features from functioning.
 
 ## Children's Privacy
 
-* **Age Requirement**: Our app is not intended for children under 13 (or under 16 in the EU)
-* **No Child Data**: We do not knowingly collect data from children under 13
-* **Parental Consent**: If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately
-* **Account Deletion**: We will delete any child's data if we become aware that it has been collected
+- Our app is **not intended for children under 13**.
+- We do not knowingly collect data from children under 13.
+- If you are a parent or guardian and believe your child has provided personal information, please contact us to request deletion.
+- Parents and guardians should supervise children's use of apps that store personal content.
 
----
+## Security
 
-## Permissions Explained
-
-### Internet Permission
-
-* **INTERNET**: Required to connect to Google Gemini API for generating daily posts
-* **Why**: Core functionality requires internet connection for AI content generation
-* **Note**: The app works offline for viewing saved content, but new posts require internet
-
-### Notification Permission
-
-* **POST_NOTIFICATIONS** (Android 13+): Required to send push notifications
-* **Why**: To notify you of daily reminders based on your preferences
-* **Control**: You can disable notifications in app settings
-
-### Background Permissions
-
-* **RECEIVE_BOOT_COMPLETED**: Required to restore scheduled notifications after device restart
-* **SCHEDULE_EXACT_ALARM**: Required for precise notification scheduling
-* **Why**: To ensure notifications work reliably even after device restarts
-
-### Vibration Permission
-
-* **VIBRATE**: Used for haptic feedback in the app
-* **Why**: Provides tactile feedback for better user experience
-
----
-
-## Security Measures
-
-* **Local Storage**: All data is stored locally on your device using encrypted Room database
-* **No Cloud Storage**: We do not store your data on any remote servers
-* **API Security**: API keys are stored securely using DataStore
-* **No User Accounts**: We do not require user accounts, reducing data exposure risk
-* **Regular Updates**: We regularly update the app to address security vulnerabilities
-* **Data Encryption**: Local database uses Android's built-in encryption
-
----
-
-## Data Deletion and Your Rights
-
-### Right to Deletion
-
-You have the right to delete your data at any time:
-
-1. **Individual Deletion**: Delete individual journal entries or affirmations from within the app
-2. **Bulk Deletion**: Go to Settings → Clear All Data to delete all app data
-3. **Uninstall**: Uninstalling the app will delete all local data
-
-### What Gets Deleted
-
-When you delete data or uninstall the app:
-
-* All journal entries
-* All affirmations
-* All daily posts (cached)
-* All activity logs
-* All app preferences
-* All local database entries
-
-### What May Remain
-
-* Aggregated, anonymized analytics data (if analytics was enabled, cannot be linked to you)
-* Crash reports (anonymized, no personal data)
-
-### GDPR Rights (EU Users)
-
-If you are in the European Union, you have additional rights:
-
-* **Right to Access**: View all your data in the app
-* **Right to Rectification**: Edit your journal entries and affirmations
-* **Right to Erasure**: Delete your data at any time
-* **Right to Data Portability**: Export your journal entries (Settings → Export)
-* **Right to Object**: Disable analytics (if implemented)
-
-To exercise these rights, use the app's built-in features or contact us.
-
----
+- Local data is protected by Android, browser, or operating-system app sandboxing.
+- Network communication uses HTTPS/TLS where applicable.
+- Third-party services named in this policy provide their own security controls and privacy policies.
+- You are responsible for protecting your device, browser profile, and account credentials.
+- We do not sell your personal data.
 
 ## Changes to This Policy
 
-* We may update this Privacy Policy from time to time
-* **Significant Changes**: We will notify you of significant changes via:
-  * In-app notification
-  * App update release notes
-* **Continued Use**: Continued use of the app after changes constitutes acceptance
-* **Last Updated**: This policy was last updated on January 2025
+We may update this Privacy Policy to reflect new features, legal requirements, or changes in our practices. Significant changes will be:
+- Noted in the app release notes or repository when applicable
+- Reflected with a new "Last updated" date
+- Communicated in the app or project page if the change is significant
 
----
+The "Last updated" date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, your data, or wish to exercise your rights:
+If you have questions about this Privacy Policy, wish to request data deletion, or have privacy concerns:
 
-* **Email**: sudarshantechlabs@gmail.com
-* **Developer Email**: sunny.sudarshan@gmail.com
-* **Website**: https://sudarshantechlabs.com
-* **GitHub**: https://github.com/SUDARSHANCHAUDHARI/ManifestMojo
+* **GitHub Repository:** https://github.com/SUDARSHANCHAUDHARI/manifestmojo-privacy-policy
+* **Email:** sunny.sudarshan@gmail.com
+* **Main App Repository:** https://github.com/SUDARSHANCHAUDHARI/ManifestMojo
 
-**Data Protection Inquiries**: For questions about data protection, data access, or data deletion, please contact us using one of the methods above.
+We will respond as quickly as possible, typically within 48 hours.
 
----
+## Data Deletion
 
-## Third-Party Services
+### How to Delete Your Account:
+This app does not require an account. You can delete local app data using the options below:
 
-This app uses the following third-party services:
+#### Option 1: In-App Deletion
+1. Open ManifestMojo
+2. Delete individual entries, reminders, history, or settings where the app provides controls
+3. Or use Android/browser settings to clear app/site data
+4. Uninstalling the app also removes local app-private data
 
-* **Google Gemini API**: Used for AI content generation
-  * See [Google Privacy Policy](https://policies.google.com/privacy)
-* **Google Play Services** (optional): Used for analytics and crash reporting (if enabled)
-  * See [Google Privacy Policy](https://policies.google.com/privacy)
+#### Option 2: Email Deletion Request
+Send an email to: **support@sudarshantechlabs.com** or **sunny.sudarshan@gmail.com**
+- Subject: "Data Deletion Request - ManifestMojo"
+- Include: The email/account identifier used in the app, if any
+- We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement
 
----
+#### Option 3: Web Deletion
+1. Visit the privacy policy website for contact and support information
+2. For browser apps, clear browser storage for the site
+3. For Android apps, clear storage from Android Settings if you want a full local reset
+
+### What Gets Deleted:
+- Local app data stored by the app
+- Local preferences and reminder/history records
+- Cached data controlled by the app or browser
+- Exported/shared files only if you delete them from where you saved them
+
+### Data Retention After Deletion:
+- **Immediate:** clearing app/site data removes local app-private data from your device/browser
+- **Uninstall:** removes app-private local data from Android apps
+- **Exports/shared files:** remain wherever you saved or sent them until you delete them
+
+To request deletion of your data:
+
+1. Open ManifestMojo, if installed
+2. Delete local content or clear app/site data where applicable
+3. Contact support via email: sunny.sudarshan@gmail.com
+4. Request account/data deletion and include enough detail for us to identify the app and any account, if one exists
+5. We will confirm what data can be deleted and complete the request according to the retention terms above
+
+## Firebase and Google Services
+
+This app may use the following services depending on the features you enable and the installed version:
+
+- Google Gemini API for optional AI features
+
+Please review relevant third-party privacy policies:
+
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
+- [Google Play Terms](https://play.google.com/about/play-terms/)
+- [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 
 ## About ManifestMojo
 
-ManifestMojo is a personal growth and manifestation app built with:
+ManifestMojo is built with privacy in mind. The app is built with:
+- Kotlin and Jetpack Compose
+- Local-first manifestation/journal storage
+- Optional Google Gemini AI features
+- Android reminders and media support
 
-* Kotlin
-* Jetpack Compose
-* Room Database (local storage)
-* Google Gemini API (for content generation)
-
-The app is designed with privacy in mind. All your personal content (journal entries, affirmations) is stored locally on your device and never sent to any server.
+The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.
 
 ---
 
-**Note:** This privacy policy is current as of version 1.0.0. Please review it periodically for updates.
+**Last Updated:** May 17, 2026
+
+---
+
+## Recent Updates (Version 1.1.0 - May 17, 2026)
+
+- **Aligned policy with the shared privacy-policy structure.**
+- **Clarified local journal/manifestation data, optional AI, reminders, and media permissions.**
