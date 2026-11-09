@@ -1,8 +1,8 @@
 # ManifestMojo Privacy Policy
 
 **Effective Date:** May 17, 2026
-_Last updated: May 17, 2026_
-**Version:** 1.1.0
+_Last updated: November 9, 2026_
+**Version:** 1.2.0
 
 ManifestMojo ("we," "our," or "us") is an Android app. ManifestMojo is a manifestation and journaling app for Android with local goals, intentions, daily posts, media, reminders, and optional AI assistance. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using ManifestMojo you agree to the practices described below.
 
@@ -15,7 +15,8 @@ ManifestMojo ("we," "our," or "us") is an Android app. ManifestMojo is a manifes
 - No account is required to use ManifestMojo.
 
 ### Device Information
-- Journal entries, intentions, goals, daily posts, media you add, activity logs, preferences, reminder settings, and any Gemini API key you provide are stored locally.
+- Journal entries, intentions, goals, daily posts, affirmations, activity logs, preferences, reminder settings, and the Gemini API key you provide are stored on your device.
+- **Your journal and goals are held in an encrypted database.** The app uses SQLCipher, and the key is generated per installation and wrapped by a key held in the Android Keystore. If that key cannot be unwrapped the app shows an error rather than falling back to an unencrypted database.
 
 ## How We Use Your Information
 
@@ -33,28 +34,28 @@ ManifestMojo ("we," "our," or "us") is an Android app. ManifestMojo is a manifes
 ## Storage and Retention
 
 ### Data Storage
-- Personal content and preferences are stored locally using on-device storage.
-- If you use optional AI features, the selected prompt/content may be sent to Google Gemini.
+- Personal content and preferences are stored on your device, in an encrypted Room database and in DataStore.
+- **The AI feature does not send your journal, goals or any text you wrote.** When you ask for a daily post or an affirmation, the app sends Google Gemini a request containing only the category you picked — wealth, health, love, success, gratitude or general — and the day of the week. Nothing you typed is included. Earlier versions of this policy said "the selected prompt/content may be sent", which claimed more than the app does.
 
 ### Data Retention
 - Local content remains until you delete it, clear app data, or uninstall the app.
 
 ### Data Security
-- Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.
-- Local data remains on your device or browser unless a feature you use requires a named third-party service.
-- Network communication uses HTTPS/TLS where applicable.
-- You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.
+- On your device, your journal and goals sit in a SQLCipher-encrypted database inside the app's private storage, protected by Android's application sandbox as well as that encryption.
+- In transit, the one network call the app makes — to the Google Gemini API, only when you ask for an affirmation and only if you have supplied a key — is over HTTPS.
+- **No Sudarshan Tech Labs server exists**, so there is no third place holding your data.
+- ManifestMojo is an Android app only; there is no web or browser version of it, and it uses no Firebase and no GitHub service.
+- You should protect your device with a screen lock, since that is what stands between someone holding your phone and your journal.
 
 ## Data Sharing
 
-### Family Groups
-- ManifestMojo does not use family groups unless explicitly described in this policy.
-- If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.
-- You control feature use through the app settings, permissions, account controls, or platform settings.
+### Sharing With Other People
+- **ManifestMojo has no sharing, pairing or collaboration features.** It is a single-user app; there is nobody to share your journal with.
 
 ### Third Parties
-- Google Gemini may receive selected text only when you use AI features.
-- No personal journal content is sent to Sudarshan Tech Labs servers.
+- **Google Gemini** receives a category name and the day of the week when you request an affirmation or a daily post. It receives none of your journal, goals or notes.
+- The request cannot happen at all unless you have pasted your own Gemini API key into Settings. The key is stored on your device. With no key, the app makes no network request. Because the call uses your own key, Google processes it under your own Google AI account and terms rather than ours.
+- No journal content is sent to Sudarshan Tech Labs servers, because no such server exists.
 
 We do **not** share your data with:
 - Data brokers
@@ -65,13 +66,24 @@ We do **not** share your data with:
 
 ### Required Permissions
 
-* **INTERNET**: Used for optional AI/network features.
+* **INTERNET**: Used only for the optional Gemini request described above.
 * **POST_NOTIFICATIONS, RECEIVE_BOOT_COMPLETED, SCHEDULE_EXACT_ALARM, VIBRATE**: Used for reminders.
-* **CAMERA, READ_MEDIA_IMAGES, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE on older Android versions**: Used for media capture/import/export features.
+
+**Removed:** earlier versions of this policy listed `CAMERA`, `READ_MEDIA_IMAGES`, `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` as being "used for media capture/import/export features". **The app has no camera or photo feature.** Those four permissions were declared in the manifest without any code using them, and they have been removed from the app.
+
+### Permissions added by Android libraries
+
+The app declares the five above. The finished build carries three more, declared by WorkManager — which runs your scheduled reminders and affirmation generation — rather than by the app's own code. They appear in the permission list you see on the Play Store:
+
+* **WAKE_LOCK**: lets scheduled work run while the phone is idle.
+* **FOREGROUND_SERVICE**: how WorkManager runs that work.
+* **ACCESS_NETWORK_STATE**: lets a library check whether a network exists before attempting to send; it grants no ability to use one.
+
+Verified against the merged manifest of the release build rather than the app's own manifest file.
 
 ### Optional Permissions
 
-* AI, camera, media, and reminders are optional features controlled by you.
+* The AI affirmations and the reminders are optional features you control. The AI feature additionally requires you to supply your own API key.
 
 ## Your Rights and Controls
 
@@ -97,7 +109,6 @@ To exercise these rights, contact us using the methods in the Contact Us section
 
 ### Permissions
 - You can revoke Android permissions in Android Settings -> Apps -> ManifestMojo -> Permissions.
-- Browser permissions and storage can be managed in your browser site settings for web apps.
 - Revoking required permissions may prevent related features from functioning.
 
 ## Children's Privacy
@@ -109,10 +120,10 @@ To exercise these rights, contact us using the methods in the Contact Us section
 
 ## Security
 
-- Local data is protected by Android, browser, or operating-system app sandboxing.
+- Local data is protected by Android's application sandbox, and your journal and goals additionally by SQLCipher encryption.
 - Network communication uses HTTPS/TLS where applicable.
 - Third-party services named in this policy provide their own security controls and privacy policies.
-- You are responsible for protecting your device, browser profile, and account credentials.
+- You are responsible for protecting your device, which for this app means a screen lock, and the Gemini API key you paste in.
 - We do not sell your personal data.
 
 ## Changes to This Policy
@@ -142,7 +153,7 @@ This app does not require an account. You can delete local app data using the op
 #### Option 1: In-App Deletion
 1. Open ManifestMojo
 2. Delete individual entries, reminders, history, or settings where the app provides controls
-3. Or use Android/browser settings to clear app/site data
+3. Or clear the app's data from Android Settings
 4. Uninstalling the app also removes local app-private data
 
 #### Option 2: Email Deletion Request
@@ -153,17 +164,17 @@ Send an email to: **support@sudarshantechlabs.com** or **sunny.sudarshan@gmail.c
 
 #### Option 3: Web Deletion
 1. Visit the privacy policy website for contact and support information
-2. For browser apps, clear browser storage for the site
+2. Uninstalling the app removes its local data, including the encrypted database
 3. For Android apps, clear storage from Android Settings if you want a full local reset
 
 ### What Gets Deleted:
 - Local app data stored by the app
 - Local preferences and reminder/history records
-- Cached data controlled by the app or browser
+- Cached data controlled by the app
 - Exported/shared files only if you delete them from where you saved them
 
 ### Data Retention After Deletion:
-- **Immediate:** clearing app/site data removes local app-private data from your device/browser
+- **Immediate:** clearing app data removes local app-private data from your device
 - **Uninstall:** removes app-private local data from Android apps
 - **Exports/shared files:** remain wherever you saved or sent them until you delete them
 
@@ -175,34 +186,44 @@ To request deletion of your data:
 4. Request account/data deletion and include enough detail for us to identify the app and any account, if one exists
 5. We will confirm what data can be deleted and complete the request according to the retention terms above
 
-## Firebase and Google Services
+## Third-Party Services
 
-This app may use the following services depending on the features you enable and the installed version:
+One, and only if you choose to use it:
 
-- Google Gemini API for optional AI features
+- **Google Gemini API**, for the optional affirmation and daily-post generation, using an API key you supply yourself
 
-Please review relevant third-party privacy policies:
+**The app uses no Firebase**, no analytics, no crash reporting, no advertising SDK and no backend of ours.
+
+Please review the relevant third-party terms:
 
 - [Google Privacy Policy](https://policies.google.com/privacy)
-- [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
+- [Gemini API Additional Terms of Service](https://ai.google.dev/gemini-api/terms)
 - [Google Play Terms](https://play.google.com/about/play-terms/)
-- [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 
 ## About ManifestMojo
 
 ManifestMojo is built with privacy in mind. The app is built with:
 - Kotlin and Jetpack Compose
-- Local-first manifestation/journal storage
-- Optional Google Gemini AI features
-- Android reminders and media support
+- A SQLCipher-encrypted Room database for your journal, goals and affirmations
+- Optional Google Gemini AI features, using a key you supply
+- Android reminders
 
-The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.
+There is no "media support": the app has no camera or photo feature. Your journal stays on your device, and the only thing that ever leaves it is a category name and a day of the week, when you ask for an affirmation.
+
+---
+
+**Last Updated:** November 9, 2026
 
 ---
 
-**Last Updated:** May 17, 2026
+## Recent Updates (Version 1.2.0 - November 9, 2026)
 
----
+- **Said what the AI feature actually sends, which is far less than this policy claimed.** The old wording was "the selected prompt/content may be sent to Google Gemini" and "Gemini may receive selected text". The request contains only the category you picked and the day of the week. **None of your journal, goals or notes is sent.** A policy that overstates what leaves your device is still a wrong policy.
+- **Said the AI feature needs your own API key.** The app has no key built in; with no key in Settings it makes no network request at all, and because the call uses your key, Google processes it under your own account and terms.
+- **Disclosed that your journal and goals are in an encrypted database.** SQLCipher, with a per-installation key wrapped by the Android Keystore, and no unencrypted fallback. This had never been mentioned, which is odd given it is the strongest protection the app has.
+- **Removed the camera and photo permissions, which described features that do not exist.** `CAMERA`, `READ_MEDIA_IMAGES`, `READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` were listed as "used for media capture/import/export features"; no code in the app used any of them. They have now been removed from the app itself too.
+- **Listed the three permissions WorkManager merges in** — `WAKE_LOCK`, `FOREGROUND_SERVICE` and `ACCESS_NETWORK_STATE` — and noted that the last lets a library check for a network without being able to use one.
+- **Removed the scaffold text** shared with sibling policies: a "Family Groups" heading for a single-user app, and references to a browser, a browser profile, browser site settings, Firebase and GitHub accounts. ManifestMojo is an Android app with no web version and uses neither Firebase nor any GitHub service.
 
 ## Recent Updates (Version 1.1.0 - May 17, 2026)
 
